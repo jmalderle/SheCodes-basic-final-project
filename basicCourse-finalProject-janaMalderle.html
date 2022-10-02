@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quotes In Colors Project</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>
+        <span class="quotes">QUOTES</span><span class="in"> IN </span
+        ><span class="colors">COLORS</span>
+      </h1>
+      <h2>
+        <em>
+          <span class="word-brightening">Brightening</span>
+          <span class="word-your">Your</span>
+          <span class="word-mood">Mood</span>
+          <span class="word-made">Made</span>
+          <span class="word-easy">Easy</span>
+        </em>
+      </h2>
+      <p>
+        <span class="quoteOnePartOne"
+          >“Creators don’t <em>separate</em> from their work,</span
+        ><br /><span class="because quoteOnePartTwo"
+          >because they <em>are</em> their work.”</span
+        >
+      </p>
+      <hr class="separator" />
+      <p class="secondQuote">
+        “<span class="word-no">No </span><span class="word-rain">rain</span>,
+        <span class="word-no">no</span> <span class="letter-f">f</span
+        ><span class="letter-l">l</span><span class="letter-o">o</span
+        ><span class="letter-w">w</span><span class="letter-e">e</span
+        ><span class="letter-r">r</span><span class="letter-s">s</span>.”
+      </p>
+      <hr class="separator" />
+      <p>
+        <span class="thirdQuotePartOne">“If the version of you </span
+        ><span class="thirdQuotePartTwo">from 5 years ago</span><br /><span
+          class="thirdQuotePartThree"
+        >
+          could see you <em>today</em>,</span
+        ><span class="thirdQuotePartFour"> they’d be so proud.”</span>
+      </p>
+      <h4>
+        <p class="introTextForButton">
+          Enjoying this page? Sign up for the free weekly letter.
+        </p>
+      </h4>
+      <button><strong>Sign Up</strong></button>
+      <p class="coded-by-phrase">
+        Coded by
+        <a href="http://www.janamalderle.com/" target="blank">Jana Malderle</a>
+      </p>
+    </div>
+    <script>
+      function question() {
+        let question = prompt("Would you like to sign up for a weekly letter?");
+
+        if (question === "yes" || question === "Yes" || question === "YES") {
+          let firstName = prompt("What’s your first name?");
+          let eMail = prompt(
+            "Great! And what’s your email address, " + firstName + "?"
+          );
+          let h4 = document.querySelector("h4");
+          h4.innerHTML = `<center/><img src=\'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/577/original/happy-bunny.gif?1640549443\'> </br>✉️</br> Thank you, <em>${firstName}</em>. You have signed up with your email address <em>${eMail}</em> for the weekly letter of “Quotes In Colors”. Have a beautiful day!`;
+        } else {
+          let h4 = document.querySelector("h4");
+          h4.innerHTML = `<center/><img src=\'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/580/original/oh-ok.gif?1640551765\'> </br></br> No problem, you are not signed up for the weekly letter.</br>If you change your mind, reload the page and click the button again.`;
+        }
+      }
+      let signUpButton = document.querySelector("button");
+      signUpButton.addEventListener("click", question);
+    </script>
+  </body>
+</html>
